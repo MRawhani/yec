@@ -1,0 +1,73 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s;
+    padding: 40px 100px ;
+    z-index: 1000;
+  
+    & .logo{
+        position: relative;
+        font-weight: 700;
+        color: $main-color;
+        text-emphasis: none;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        transition: .3s;
+        opacity: 0;
+        & img{
+            width: 50%;
+            height: auto;
+        }
+    }
+    &.scrolled{ 
+        padding: 15px 100px ;
+        background-color: #fff;
+        box-shadow: $main-shadow;
+        & .logo{ 
+            opacity: 1;
+        }
+    } 
+
+    & ul{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        & li{
+            position: relative;
+            list-style: none;
+cursor: pointer;
+            & a{
+                position: relative;
+                margin: 0 15px ;
+                text-decoration: none;
+                color: $main-color;
+                letter-spacing: 2px;
+                font-weight: 500;
+                transition: .3s;
+                transition: hover .1s;
+                &:hover{
+                    color: $second-color;
+                }
+            } 
+            &:not(:last-child){
+                & a{
+                  
+                    margin: 0 15px ;
+                }
+            }
+
+            & .active{
+                color: $second-color;
+
+            }
+        }
+    }
+}

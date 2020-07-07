@@ -1,0 +1,344 @@
+
+.animate{
+    animation: dis .4s;
+    position: relative;
+    transition: all .3s;
+}
+.no-margin-left{
+    margin-left: 0;
+}
+.no-margin{
+    margin: 0;
+}
+.position-relative{
+    position: relative;
+}
+.shadow-third{
+    box-shadow: $third-shadow;
+}
+.border-none{
+    border: none;
+}
+.errorMessage{
+    padding: 18px;
+    background-color: tomato;
+    color: white;
+}
+.successMessage{
+    padding: 18px;
+    background-color: yellowgreen;
+    color: white;
+}
+
+
+.hidden-sm{
+    display: none;
+
+    @include respond(m){
+        display: inline-block;
+    }
+}
+
+.icon{
+    vertical-align: middle;
+    transition: all .3s;
+    height: 2rem;
+    width: 2rem;
+    &__inside{
+        position: relative;
+        top: 3px;
+    }
+   
+}
+
+.w-100{
+    width: 100%;
+}
+.font-Default{
+    font-size: $default-font;
+}
+.mg-bottom{
+    margin-bottom: 1rem;
+}
+.mg-top{
+    margin-top: 5rem;
+}
+.mg-left{
+    margin-left: 1rem;
+}
+.border-top{
+    border-top: 1px solid rgba($color: $grey, $alpha: .2);
+}
+.no-padding-left{
+    padding-left: 0;
+}
+
+.no-padding-right{
+    padding-right: 0;
+}
+.no-padding{
+    padding: 0;
+}
+
+.customModal{
+
+    @include respond(m){
+        display: none;
+    }
+}
+
+.no-shadow{
+    box-shadow: none;
+}
+.upOverlay{
+    position: relative;
+    z-index: 6;
+}
+   
+
+/////////override
+*:focus{
+    outline: none;
+}
+
+.rc-collapse > .rc-collapse-item > .rc-collapse-header{
+    flex-direction:row-reverse !important;
+    justify-content: space-between;
+    background: #ffffff;
+    font-size: $default-font;
+
+}
+.image-gallery-content.left .image-gallery-slide .image-gallery-image, .image-gallery-content.right .image-gallery-slide .image-gallery-image {
+    max-height: 50vh !important;
+}
+.image-gallery-content.fullscreen{
+    top:50% !important;
+    transform: translateY(-50%) !important;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+     50% {
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+    }
+      50% {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-395px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-395px)
+              rotate(-360deg);
+  }
+}
+
+ 
+@-moz-keyframes spinPulse {
+    0% { transform: scale(.8); opacity:0; }
+	50% { transform:  scale(1); opacity:1; }
+	100% { transform:  scale(1.08); opacity:0; }
+}
+ 
+ 
+@keyframes spinPulse {
+       0% { transform: scale(.8); opacity:0; }
+	50% { transform:  scale(1); opacity:1; }
+	100% { transform:  scale(1.08); opacity:0; }
+}
+
+@-webkit-keyframes spinPulse {
+       0% { transform: scale(.8); opacity:0; }
+	50% { transform:  scale(1); opacity:1; }
+	100% { transform:  scale(1.08); opacity:0; }
+}
+
+
+
+ 
+// .circle{
+// //     position:absolute;
+// //     top:0;
+// //     right:0;
+// //     bottom:0;
+// //     left:0;
+// //     z-index:0;
+// //      animation: spin 5s infinite ease-in-out;
+// //     -moz-animation: spin 5s infinite ease-in-out;
+// //     -webkit-animation: spin 5s infinite ease-in-out;
+// //         opacity: .9;
+// //     border-radius: 50%;
+// //   background-color: transparent;
+// //         border: 1px solid rgba($main-color,.3);
+// //         margin: 0 auto;
+         
+      
+// //       padding:40px;
+
+//     &-1 {
+//      width:800px;
+//   height:800px;
+//   border:1px solid rgba($main-color,.3);
+//   position:absolute;
+//   top:0; bottom:0; left:0;right:0;
+//   margin:auto;
+//   border-radius:50%; 
+      
+//     } 
+
+//     &-2 {
+//   width:30px;
+//   height:30px;
+//   background:rgba($fourth-color,.3);
+//   border-radius:50%;
+//   position:absolute;
+//   top:0; bottom:0; left:0;right:0;
+//   overflow:hidden;
+//   margin:auto;
+//   animation: circle 6s linear infinite;
+     
+        
+//     }
+//      &-3 {
+    
+//      width: 500px;
+//     height: 500px;
+      
+//           position:absolute;
+//     top:10%;
+//     right:0;
+//     bottom:0;
+//     left:0;
+//     z-index:0;
+//      animation: spin 5s infinite ease-in-out;
+//     -moz-animation: spin 5s infinite ease-in-out;
+//     -webkit-animation: spin 5s infinite ease-in-out;
+//         opacity: .9;
+//     border-radius: 50%;
+//   background-color: transparent;
+//         border: 1px solid rgba($main-color,.3);
+//         margin: 0 auto;
+         
+        
+//     }
+// }
+
+.circle{
+ position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:0;
+     animation: spinPulse 1s infinite ease-in-out;
+    -moz-animation: spinPulse 1s infinite ease-in-out;
+    -webkit-animation: spinPulse 1s infinite ease-in-out;
+        opacity: .9;
+    border-radius: 50%;
+  background-color: transparent;
+        border: 1px solid rgba($main-color,.3);
+     margin:auto; 
+         
+      
+
+    &-1{
+        height:1100px;
+        width:1100px;
+        
+    }
+     &-2{
+         height:900px;
+        width:900px;
+    }
+     &-3{
+         height:700px;
+        width:700px;
+    }
+}
+.footer{
+    padding: 50px 30px 10px ;
+    background-color: $second-color;
+
+    & p{
+        color: #fff;
+font-size: 14px ;
+text-align: center;
+    }
+}
+
+.slick-current{ 
+    
+    .processCard {
+        background-color: $main-color;
+        position: relative;
+       opacity: 1;
+        &::before {
+            content: "";
+            width: 30px;
+            height: 170px;
+            background-color: $second-color;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 10%;
+        }
+    
+        &__title {
+           
+        transform: translateY(0%);
+color:#fff;
+    
+        }
+    
+        &__details {
+                       //  color: #fff;
+            opacity: 1;
+            color: white;
+     
+        } 
+    
+        &__number {
+           color: #f2f2f2;
+        
+        transform: translate(-15%,0%);
+
+          
+            
+     
+        }
+        
+        &__data {
+       
+    
+        }
+        
+      
+    
+    } 
+
+}
+
+
+ .flex-row{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }

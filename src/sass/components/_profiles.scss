@@ -1,0 +1,172 @@
+.profiles {
+
+    &__wrapper {
+        padding: 60px 70px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__desc {
+        position: relative;
+
+        padding: 20px 250px;
+
+        & p {
+            column-count: 2;
+            font-weight: 100;
+            font-size: 15px;
+            color: #fff;
+            line-height: 1.8;
+            column-gap: 50px;
+        }
+    }
+
+    .section-header {
+        color: #fff;
+        text-align: right;
+        position: relative;
+        z-index: -2;
+
+        &__back {
+            text-align: right;
+            color: #fff;
+            font-family: "Fred", sans-serif;
+            position: relative;
+            z-index: -2;
+            opacity: 1;
+            font-size: 150px;
+            letter-spacing: 15px;
+            transform: scale(1.2);
+            transform-origin: center right;
+            // -webkit-text-stroke: 1px rgba($main-color, .2);
+            text-shadow:
+                -1px 0 rgba($main-color, .2),
+                0 1px rgba($main-color, .2), 1px 0 rgba($main-color, .2),
+                0 -1px rgba($main-color, .2);
+        }
+
+        &__front {
+            text-align: right;
+            font-family: "Fred", sans-serif;
+            position: absolute;
+            top: 47px;
+            right: 20px;
+            font-size: 100px;
+            font-weight: 100;
+            color: $second-color;
+            letter-spacing: 5px;
+            // transform: translate(-133px, -126px) scale(1.2);
+        }
+    }
+}
+
+
+.profileCard {
+    max-width: 450px;
+    position: relative;
+    margin-bottom: -74px;
+    &__image {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .3s;
+        // background-image: none;
+        position: relative;
+
+
+        &:hover {
+            transform: translateY(10px);
+            opacity: 1;
+            //   background-color: $main-color;
+
+
+        }
+
+    }
+
+    .profileCard__text {
+
+        padding: 30px 14px 30px 96px;
+        background: $main-color;
+        position: relative;
+        top: -83px;
+        left: 129px;
+        z-index: -1;
+        border-radius: 10px;
+
+        & h1 {
+            font-size: 20px;
+            color: #fff;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        & p {
+            font-size: 15px;
+            color: $second-color;
+        }
+    }
+}
+
+.profileCard-right {
+    max-width: 450px;
+    position: relative;
+    margin-bottom: -74px;
+@include respond(m){
+    left: 100%;
+
+}
+    &__image {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .3s;
+        // background-image: none;
+        position: relative;
+        @include respond(m){
+            right: 191px;
+
+        
+        }
+
+
+        &:hover {
+            transform: translateY(10px);
+            opacity: 1;
+            //   background-color: $main-color;
+
+
+        }
+
+    }
+
+    .profileCard-right__text {
+
+        padding: 30px 96px 30px 14px;
+        background: $main-color;
+        position: relative;
+        top: -83px;
+        @include respond(m){
+        right: 538px;
+
+
+        
+        }
+        z-index: -1;
+        border-radius: 10px;
+
+        & h1 {
+            font-size: 20px;
+            color: #fff;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        & p {
+            font-size: 15px;
+            color: $second-color;
+        }
+    }
+}

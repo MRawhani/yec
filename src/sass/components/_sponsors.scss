@@ -1,0 +1,43 @@
+.sponsors {
+	&__wrapper {
+	 padding: 0px 120px 50px;
+		position: relative;
+		z-index: 1;
+	}
+
+
+	.section-header {
+		color: #fff;
+		text-align: center;
+		position: relative;
+margin-bottom: 60px;
+		&__back {
+			text-align: center;
+			color: #fff;
+			font-family: "Careem", sans-serif;
+
+			font-size: 100px;
+			letter-spacing: 35px;
+			transform: scale(1.2);
+			transform-origin: center center;
+			// -webkit-text-stroke: 1px rgba($main-color, .2);
+			text-shadow:
+				-1px 0 rgba($main-color, .2),
+				0 1px rgba($main-color, .2), 1px 0 rgba($main-color, .2),
+				0 -1px rgba($main-color, .2);
+		}
+
+		&__front {
+			text-align: center;
+			font-family: "Fred", sans-serif;
+			position: absolute;
+			top: 47px;
+			left: 50%; 
+			font-size: 60px;
+			font-weight: 100;
+			color: $main-color;
+			letter-spacing: 5px;
+			// transform: translate(-133px, -126px) scale(1.2);
+		}
+	}
+}

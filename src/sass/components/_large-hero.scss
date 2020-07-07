@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+// Variáveis
+$color-liquid: #DFF43F;
+$bg-color: #34495E;
+
+// Mixins
+@mixin keyframes($animate-name) {
+	@-webkit-keyframes #{$animate-name} { @content; }
+	@keyframes #{$animate-name} { @content;}
+}
+
+@mixin animate($name, $time : 0.1s) {
+	-webkit-animation: $name $time linear infinite;
+			animation: $name $time linear infinite;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: $color-liquid;
+}
+
+/* Tube */
+.tube {
+	position: relative;
+	margin: 100px auto;
+	width: 50px;
+	height: 250px;
+	border: 1px solid rgba(255,255,255,0.15);
+	border-top: none;
+  	background-repeat: repeat-x;
+	background-size: 100%;
+
+	box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
+	border-radius: 0 0 25px 25px;
+
+	@include animate(animate-wave, 0.8s);
+}
+
+
+// Animate Wave
+@include keyframes(animate-wave1) {
+	
+
+	0% { background-position: 0 20px; }
+	50% { background-position: 25px 25px; }
+	100% { background-position: 50px 20px; }
+	
+}
+@include keyframes(animate-wave) {
+	25% { background-position: 25px 25px; }
+	50% { background-position: 550px 550px; }
+	70% { background-position: 885px 885px; }
+	
+}
+
+/*---*/
+ 
+.hero {
+	position: relative; 
+//	border-bottom: 1px solid #000;
+//overflow: hidden;
+	transition:all .3s linear;
+	background-size: 100%;
+
+// @include animate(animate-wave, 0.8s);
+  
+
+	&--small{
+		height: 20vh;
+	}
+    &__overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: .3);
+    }
+	&__image {
+        display: block; 
+        width: 100%;
+        height: 100% ;
+		/*for not having bottom margin*/
+	}
+
+	&__content {
+	//	padding-top: 60px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+        transform: translateY(-50%);
+        
+        
+	
+	}
+
+	&__title {
+		font-weight: 100;
+		color: $main-color;
+		font-size: 80.78465px;
+		margin: 0;
+	 
+		line-height: 1;
+	
+		font-family: 'Careem', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+        // @include respond(s) {
+		// 	font-size: 4rem;
+		// }
+
+
+	}
+
+	&__subtitle {
+		font-weight: 100; 
+		color: $main-color;
+		font-size: 41.759795px;
+		//margin-bottom: 20px;
+
+ font-family: 'Careem', sans-serif;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+        // @include respond(s) {
+		// 	font-size: 2rem;
+		// }
+		letter-spacing: 6px;
+		line-height: 1.5;
+
+	}
+
+	&__description {
+		color: $second-color;
+		font-size: 21.622237px;
+		font-weight: 100;
+		// text-shadow: 2px 2px 0 rgba($second-color, 0.1);
+		max-width: 800px;
+		margin-right: auto;
+		margin-left: auto;
+letter-spacing: 3.2px;
+		@mixin atSmall {
+			font-size: 1.875rem;
+		}
+	}
+}
+
+

@@ -1,0 +1,64 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+}
+@font-face {
+    font-family: 'Careem';
+    font-style: normal;
+  //  font-weight: 400;
+    src: local("Careem"), url('../../assets/Fonts/CAREEM-REGULAR.DB5F2BCA26992ED25A89.otf') format('opentype'); /* IE9 Compat Modes */
+     }
+     @font-face {
+        font-family: 'Fred';
+        font-style: normal;
+      //  font-weight: 400;
+        src: local("Fred"), url('../../assets/Fonts/FredokaOne-Regular.ttf') format('truetype'); /* IE9 Compat Modes */
+         }
+
+body { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Careem', sans-serif;
+    overflow-x: hidden;
+   // direction: rtl;
+   // color: $black-color;
+}
+
+.container {
+    overflow: hidden;
+    max-width: 65rem;
+    margin: 0 auto;
+    padding-right: 18px;
+    padding-left: 18px;
+    @include respond(s){
+        max-width: 80rem;
+    }
+    @include respond(m){
+        max-width: 114rem;
+    }
+    &__not-hidden{
+        overflow: visible;
+    }
+    &-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+        @include respond(m){
+            max-width: 130rem;
+        }
+    }
+}
+
+
+p {
+    font-weight: 300;
+    color: $color-text;
+
+     
+    font-size: 1.3rem;
+     
+}

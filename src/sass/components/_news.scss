@@ -1,0 +1,56 @@
+.news {
+    background-color: $main-color;
+
+    &__wrapper {
+        padding: 60px 90px;
+        position: relative;
+        z-index: 1;
+  
+        & h1{
+            color: #fff ;
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+    }
+
+   
+}
+
+.newsCard{
+max-width: 350px;
+position: relative;
+    &__image{
+        width: 240px;
+        height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    // background-image: none;
+position: relative;
+opacity: .7;
+
+    &:hover{
+        transform: translateY(-10px);
+        opacity: 1;
+     //   background-color: $main-color;
+ 
+
+    }
+
+    }
+ 
+    .newCard__text{
+        background: #fff;
+        padding: 50px 14px 30px;
+        position: relative;
+    top: -40px;
+    left: 22px;
+    z-index: -1;
+    border-radius: 10px;
+
+    & p{
+        font-size: 15px;
+        line-height: 1.4;
+    }
+    }
+} 
