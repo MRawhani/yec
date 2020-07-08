@@ -13,6 +13,12 @@
     src: local("Careem"), url('../../assets/Fonts/CAREEM-REGULAR.DB5F2BCA26992ED25A89.otf') format('opentype'); /* IE9 Compat Modes */
      }
      @font-face {
+        font-family: 'Careem-Bold';
+        font-style: normal;
+      //  font-weight: 400;
+        src: local("Careem-Bold"), url('../../assets/Fonts/CAREEM-BOLD.4E85A226FB03BDDC2CB7.otf') format('opentype'); /* IE9 Compat Modes */
+         }
+     @font-face {
         font-family: 'Fred';
         font-style: normal;
       //  font-weight: 400;
@@ -40,6 +46,31 @@ body {
     }
     @include respond(m){
         max-width: 114rem;
+    }
+    &__not-hidden{
+        overflow: visible;
+    }
+    &-fluid{
+        padding-right: 0px;
+        padding-left: 0px;
+        @include respond(m){
+            max-width: 130rem;
+        }
+    }
+}
+
+
+.wrapper {
+    overflow: hidden;
+    max-width: 65rem;
+    margin: 0 auto;
+    padding-right: 18px;
+    padding-left: 18px;
+    @include respond(s){
+        max-width: 80rem;
+    }
+    @include respond(m){
+        max-width: 65rem;
     }
     &__not-hidden{
         overflow: visible;

@@ -36,12 +36,11 @@ export default class Index extends Component {
       id="home"
         className={`hero `}
         style={{
-          background: `url(${process.env.PUBLIC_URL}/images/elements/dots-1.svg) center repeat-x`,
+          background: `url(${process.env.PUBLIC_URL}/images/elements/dots-1.svg) center no-repeat`,
 
           height: "100vh",
           backgroundPosition: "bottom",
           backgroundSize: "100%",
-	backgroundPositionX: "100px" 
 
         }}
       >

@@ -15,9 +15,9 @@ export default class Index extends React.Component {
   render() {
     const settings = {
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
-    //   centerMode: true,
+    // centerMode: true,
       adaptiveHeight: true,
       responsive: [
         {
@@ -46,13 +46,10 @@ export default class Index extends React.Component {
     };
     return (
       <div id="process" className="process">
-        <div className="section-header">
+        <div className="section-header ">
           <h1 className="section-header__back">The Competition Process</h1>
-          <h1 className="section-header__front">
-            The <br /> Competition <br /> Process
-          </h1>
+        
         </div>
-        <div className="container process__wrapper">
           <div className="arrows">
             <img
               src={`${process.env.PUBLIC_URL}/images/elements/arrow-next.svg`}
@@ -68,6 +65,11 @@ export default class Index extends React.Component {
 
             />
           </div>
+        <div className="wrapper d-flex">
+        <h1 className="section-header__front">
+            The <br /> Competition <br /> <strong>Process</strong>
+          </h1>
+        <div className="wrapper process__wrapper">
           {/* <div className="process__active"> Single Item</div>   */}
           <Slider ref={c => (this.slider = c)} {...settings}>
             {websiteData.properties.map((item, i) => (
@@ -75,7 +77,9 @@ export default class Index extends React.Component {
             ))}
           </Slider>
         </div>
-      </div>
+  
+        </div>
+            </div>
     );
   }
 }

@@ -17,10 +17,10 @@
         width: 70px;
         height: 30px;
         background-color: $main-color;
-        position: absolute;
+         position: absolute;
         z-index: 1;
         bottom: -10px;  
-        right: 0;
+        left: 0;
     }
 
 
@@ -35,7 +35,7 @@
 
         padding: 20px ;
 @include respond(m){
-    padding: 20px 250px;
+    padding: 20px 45px;
 
 }
         & p {
@@ -56,7 +56,7 @@
     &__back {
         text-align: right;
         color: $second-color;
-        font-family: "Fred", sans-serif;
+        font-family: "Careem-Bold", sans-serif;
 
         font-size: 150px;
         letter-spacing: 15px;
@@ -71,12 +71,12 @@
 
     &__front {
         text-align: right;
-        font-family: "Fred", sans-serif;
+        font-family: "Careem-Bold", sans-serif;
         position: absolute;
         top: 47px;
         right: 20px;
         font-size: 100px;
-        font-weight: 100;
+        font-weight: 100;      
         color: #fff;
         letter-spacing: 5px;
         // transform: translate(-133px, -126px) scale(1.2);

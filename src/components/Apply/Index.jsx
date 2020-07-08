@@ -14,7 +14,7 @@ export default function Index() {
       }}
     >
       <div className="apply__content">
-        <div className="conatiner">
+        <div className="wrapper">
           <h2 className="apply__subtitle">How To</h2>
           <h1 className="apply__title">Apply</h1>
 

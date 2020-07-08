@@ -1,10 +1,11 @@
 .news {
     background-color: $main-color;
+    position: relative;
 
     &__wrapper {
-        padding: 60px 90px;
-        position: relative;
-        z-index: 1;
+     //edit   padding: 60px 90px;
+      //  position: relative;
+    //    z-index: 1;
   
         & h1{
             color: #fff ;
@@ -12,26 +13,63 @@
             margin-bottom: 50px;
         }
     }
-
+    & .arrows{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+       left: 0;
+       right: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+        &__next{
+            width: 70px;
+            height: auto;
+            cursor: pointer;
+            transition: .3s;
+            position: absolute;
+            right: 5%;
+          &:hover{
+              transform: translateY(-10px);
+          }
+           
+    
+     }
+     &__prev{
+         width: 70px;
+         height: auto;
+         cursor: pointer;
+         transition: .3s;
+         transform: rotate(180deg);
+         position: absolute;
+         left: 5%;
+       
+         &:hover{
+             transform: translateY(10px) rotate(180deg);
+         }
+    
+     }
+    }
    
 }
 
 .newsCard{
-max-width: 350px;
+max-width: 250px;
 position: relative;
     &__image{
-        width: 240px;
+        width: 150px;
         height: auto;
     border-radius: 10px;
     cursor: pointer;
     transition: .3s;
     // background-image: none;
 position: relative;
-opacity: .7;
+//opacity: .7;
 
     &:hover{
         transform: translateY(-10px);
-        opacity: 1;
+       // opacity: 1;
      //   background-color: $main-color;
  
 
@@ -41,7 +79,7 @@ opacity: .7;
  
     .newCard__text{
         background: #fff;
-        padding: 50px 14px 30px;
+        padding: 50px 10px 15px 15px;
         position: relative;
     top: -40px;
     left: 22px;
@@ -49,7 +87,7 @@ opacity: .7;
     border-radius: 10px;
 
     & p{
-        font-size: 15px;
+        font-size: 12px;
         line-height: 1.4;
     }
     }

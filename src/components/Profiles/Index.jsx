@@ -14,7 +14,7 @@ export default function Index() {
 
     }}
     >
-     <div className="container profiles__wrapper">
+     <div className="wrapper profiles__wrapper">
          <div className="circle circle-1"></div>
          <div className="circle circle-2"></div>
          <div className="circle circle-3"></div>

@@ -55,18 +55,6 @@ export default class Nav extends Component {
           <li>
             <Link
               activeClass="active"
-              to="news"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              NEWS
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
               to="process"
               spy={true}
               smooth={true}
@@ -76,6 +64,19 @@ export default class Nav extends Component {
               PROCESS
             </Link>
           </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="news"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              NEWS
+            </Link>
+          </li>
+         
           <li>
             <Link
               activeClass="active"

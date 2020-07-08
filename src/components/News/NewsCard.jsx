@@ -10,7 +10,7 @@ export default function NewsCard({item}) {
       />
       <div className="newCard__text">
         <p>
-          {item?item.text :"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat,odio! Itaque, nulla rem. Voluptatum, blanditiis rem exercitationem"}
+          {item?item.text :"Lorem ipsum dolor sit amet constetur, nulla rem. Voluptatum, exercitationem"}
          
         </p>
       </div>

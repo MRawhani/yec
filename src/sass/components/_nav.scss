@@ -4,12 +4,12 @@
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     transition: .3s;
-    padding: 40px 100px ;
+    padding: 20px 100px ;
     z-index: 1000;
-  
+  min-width: 100%;
     & .logo{
         position: relative;
         font-weight: 700;
@@ -20,12 +20,12 @@
         transition: .3s;
         opacity: 0;
         & img{
-            width: 50%;
+            width: 40%;
             height: auto;
         }
     }
     &.scrolled{ 
-        padding: 15px 100px ;
+        padding: 8px 100px ;
         background-color: #fff;
         box-shadow: $main-shadow;
         & .logo{ 
@@ -36,9 +36,9 @@
     & ul{
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
-
+        flex: 1;
 
         & li{
             position: relative;

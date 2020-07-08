@@ -318,7 +318,7 @@ color:#fff;
         &__number {
            color: #f2f2f2;
         
-        transform: translate(-15%,0%);
+        transform: translate(-22%,0%);
 
           
             
@@ -336,9 +336,15 @@ color:#fff;
 
 }
 
-
+.d-flex{
+    display: flex;
+}
  .flex-row{
      display: flex;
      justify-content: space-between;
      align-items: center;
+ }
+
+ .slick-list{
+    //  padding: 0 100px !important;
  }

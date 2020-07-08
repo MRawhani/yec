@@ -8,7 +8,7 @@ export default function Index() {
       className={` sponsors`}
    
     >
-      <div className="container sponsors__wrapper">
+      <div className="wrapper sponsors__wrapper">
       <div className="circle circle-1"></div>
          <div className="circle circle-2"></div>
          <div className="circle circle-3"></div>

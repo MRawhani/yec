@@ -1,66 +1,64 @@
 .process{
    // background-color: #ddd;
     height: 100%;
-//     &__active{ 
-//     max-width: 220px;
-//     margin: 0 auto;
-//     height: 100%;
-//         background-color: #C06D81;
-// z-index: 2; 
-//     }
+
 position: relative;
+//edit 
+display: flex;
 
 
 &__wrapper{ 
    position: relative;
-
-   .arrows{
-       position: absolute;
-       top: 50%;
-       transform: translateY(-50%);
-       right: 3%;
- z-index: 5;
+   //edit
+   
+   
+}
+.arrows{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3%;
+z-index: 5;
 display: flex;
 flex-direction: column;
 transition: .2s;
-       &__next{
-           width: 70px;
-           height: auto;
-           cursor: pointer;
-           transition: .3s;
-         &:hover{
-             transform: translateY(-10px);
-         }
-          
-
-    }
-    &__prev{
+    &__next{
         width: 70px;
         height: auto;
         cursor: pointer;
         transition: .3s;
+      &:hover{
+          transform: translateY(-10px);
+      }
+       
 
-        position: absolute;
-        left: -70px;
-        top: 70px; ///same width
-        &:hover{
-            transform: translateY(10px);
-        }
+ }
+ &__prev{
+     width: 70px;
+     height: auto;
+     cursor: pointer;
+     transition: .3s;
 
-    }
-   }
+     position: absolute;
+     left: -70px;
+     top: 70px; ///same width
+     &:hover{
+         transform: translateY(10px);
+     }
+
+ }
 }
 .section-header {
     color: #fff;
     text-align: right;
-    position: absolute;
-left: 0;
-right: 0;
-top: 0;
+// position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
     &__back {
         text-align: left;
         color: #fff;
-        font-family: "Fred", sans-serif;
+        font-family: "Careem-Bold", sans-serif;
 white-space: pre;
         font-size: 120px;
         letter-spacing: 15px;
@@ -79,15 +77,24 @@ white-space: pre;
 
     &__front {
         text-align: left;
-        font-family: "Fred", sans-serif;
-        position: absolute;
-        right: 141px;
-        top: 33px;
+    
         font-size:50px;
         font-weight: 100;
         color: $main-color;
         letter-spacing: 5px;
+         //edit
+        //  position: absolute;
+        // right: 141px;
+        // top: 33px;
         // transform: translate(-133px, -126px) scale(1.2);
+        //edit
+        position: relative;
+      //edit  left :20%;
+      top: 10%;
+        & strong{
+        font-family: "Careem-Bold", sans-serif;
+
+        }
     }
 }
 }
@@ -98,10 +105,10 @@ white-space: pre;
     transition: all 0.3s linear;
     //cursor: pointer;
     //  background-color: #f3f3f3; 
-     padding: 10px;
-    max-width: 320px;
+   //edit  padding: 10px;
+  //edit  max-width: 320px; remove for padding
     text-align: left;
-    margin: 0 auto;
+   //edit margin: 0 auto;
   //   overflow-x: hidden;
     color: #fff;
     flex: 1;
@@ -117,12 +124,13 @@ white-space: pre;
     &__title {
         padding-left: 1rem;
          color: #000;
-       transform: translateY(296%);
+       transform: translateY(300%);
         position: relative;
         z-index: 1;
         transition: all .5s linear;
         text-align:left;
         margin-bottom: 50px;
+        font-family: "Careem-Bold", sans-serif;
 
     }
 
@@ -148,7 +156,7 @@ white-space: pre;
     &__number {
         font-size: 15rem; 
         //    color: #fff;
-        transform: translate(-12%,-61%);
+        transform: translate(-21%,-61%);
         transition: all .5s linear;
         color: #C6C6C6;
       

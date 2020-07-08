@@ -12,7 +12,7 @@ function PrevArrow(props) {
       src={`${process.env.PUBLIC_URL}/images/elements/arrow-prev.svg`}
       alt="arrow prev"
       className={className}
-      style={{ ...style, width: "70px", height: "auto" ,left:"-80px"}}
+      style={{ ...style, width: "70px", height: "auto",zIndex:'2' }}
       onClick={onClick} 
     /> //position:'relative',left:"-40px"
   );
@@ -30,22 +30,30 @@ function NextArrow(props) {
   );
 }
 export default class NewsSlider extends React.Component {
+  next=()=> {
+    this.slider.slickNext();
+  }
+  previous=()=> {
+    this.slider.slickPrev();
+  }
   render() {
     const settings = {
-      infinite: true,
+      infinite: true, 
 
-      slidesToShow: 2,
+      slidesToShow: 3,
       slidesToScroll: 1,
+      initialSlide: 1,
 
-      speed: 1000,
-
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />,
+      speed: 500,
+centerMode:true,
+    //  nextArrow: <NextArrow />,
+   //   prevArrow: <PrevArrow />,
+   arrows:false,
 
       cssEase: "linear",
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -70,7 +78,22 @@ export default class NewsSlider extends React.Component {
     };
     return (
       <div className="sponsors-slider">
-        <Slider {...settings}>
+          <div className="arrows">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/elements/Arrow_white_next.svg`}
+                alt="arrow next"
+                className={`arrows__next`}
+                onClick={this.next}
+              />
+              <img
+                src={`${process.env.PUBLIC_URL}/images/elements/Arrow_white_prev.svg`}
+                alt="arrow prev"
+                className={`arrows__prev`}
+                onClick={this.previous}
+  
+              />
+            </div>
+        <Slider ref={c => (this.slider = c)} {...settings}>
           {websiteData.blogs.map((item, i) => (
             <NewsCard   key={i} item={item} />
           ))}
