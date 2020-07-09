@@ -68,17 +68,14 @@
     &__image {
         width: 200px;
         height: auto;
-       //border-radius: 10px;
         cursor: pointer;
         transition: .3s;
-        // background-image: none;
         position: relative;
 
 
         &:hover {
             transform: translateY(10px);
             opacity: 1;
-            //   background-color: $main-color;
 
 
         }
@@ -121,11 +118,10 @@ text-align: right;
     &__image {
         width: 200px;
         height: auto;
-      //  border-radius: 10px;
+    
         cursor: pointer;
         transition: .3s;
-        // background-image: none;
-      //edit  position: relative;
+     
         @include respond(m){
             right: 44%;
 
@@ -137,7 +133,7 @@ text-align: right;
         &:hover {
             transform: translateY(10px);
             opacity: 1;
-            //   background-color: $main-color;
+         
 
 
         }

@@ -1,16 +1,14 @@
 .process {
-    // background-color: #ddd;
+
     height: 100%;
 
     position: relative;
-    //edit 
+
     display: flex;
 
 
     &__wrapper {
         position: relative;
-        //edit
-
 
     }
 
@@ -89,14 +87,9 @@
             font-weight: 100;
             color: $main-color;
             letter-spacing: 5px;
-            //edit
-            //  position: absolute;
-            // right: 141px;
-            // top: 33px;
-            // transform: translate(-133px, -126px) scale(1.2);
-            //edit
+
             position: relative;
-            //edit  left :20%;
+
             top: 15px;
             line-height: 1;
 
@@ -112,21 +105,16 @@
     // border: 3px #f3f3f3 solid;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     transition: all 0.3s linear;
-    //cursor: pointer;
-    //  background-color: #f3f3f3; 
-    //edit  padding: 10px;
-    //edit  max-width: 320px; remove for padding
+
     text-align: left;
-    //edit margin: 0 auto;
-    //   overflow-x: hidden;
+
     color: #fff;
     flex: 1;
 
     opacity: 0.7;
 
     box-shadow: none;
-    //background-color: white;
-    // border-color: white;
+
     transition: opacity 300ms linear, border-color 300ms linear, background-color 300ms linear, transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
 

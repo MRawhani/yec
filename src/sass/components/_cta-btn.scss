@@ -6,19 +6,19 @@
         text-decoration: none;
         padding: .4rem 2rem;
         font-size: 21.622237px;
-		font-weight: 100;
+        font-weight: 100;
         display: inline-block;
         border-radius: 30px;
         transition: all .2s;
         position: relative;
         border: none;
         letter-spacing: 3.2px;
-margin: 30px auto;
-        font-family: "Careem",sans-serif;
-        //  box-shadow: $main-shadow; 
+        margin: 30px auto;
+        font-family: "Careem", sans-serif;
+     
         cursor: pointer;
         backface-visibility: hidden;
-       
+
     }
 
     &:hover {
@@ -35,104 +35,37 @@ margin: 30px auto;
         /*in relation to link not hover*/
         box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, .1);
     }
-    &--border{
+
+    &--border {
         border: 1.5px solid $main-color;
         color: $second-color;
         background-color: rgba($color: #FBFBFB, $alpha: .5);
         position: relative;
-      
+
     }
-    &--filled{
-      
+
+    &--filled {
+
         background-color: $second-color;
         color: $main-color;
-    
+
         position: relative;
-      
+
     }
+
     &--small {
         font-size: 1.2rem;
     }
+
     &--large {
         font-size: 2rem;
         padding-right: 4rem;
         padding-left: 4rem;
     }
 
-    &--light {
+ 
 
-        background-color: transparent;
-        border: 1px solid rgba($grey-light, .5);
+  
 
-        &-theme-events {
-            color: $events-main;
-
-            &:hover {
-                border: 1px solid $events-main;
-
-            }
-        }
-
-        &-theme-clinics {
-            color: $clinics-main;
-
-            &:hover {
-                border: 1px solid $clinics-main;
-
-            }
-        }
-
-        &-theme-hotels {
-            color: $hotels-main;
-
-            &:hover {
-                border: 1px solid $hotels-main;
-
-            }
-        }
-
-        &-theme-entertainment {
-            color: $entertainments-main;
-
-            &:hover {
-                border: 1px solid $entertainments-main;
-
-            }
-        }
-        &-theme-general {
-            color: $general-main;
-
-            &:hover {
-                border: 1px solid $general-main;
-
-            }
-        }
-    }
-    &--time{
-        padding: .4rem 1rem;
-        background: transparent;
-        margin-bottom: .4rem;
-       &--active{
-        &:hover {
-            box-shadow: $card-shadow;
-            transform: translateY(-1.2px);
-            background-color: $clinics-main;
-            color: #fff;
-
-    
-        }
-       }
-        &--disabled{
-            text-decoration: line-through;
-            &:hover {
-                box-shadow: none;
-             
-                
-    
-        
-            }
-        }
-    }
-   
 
 }

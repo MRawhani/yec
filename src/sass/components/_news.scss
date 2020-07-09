@@ -5,9 +5,7 @@
     &__wrapper {
         padding-top: 60px;
         padding-bottom: 60px;
-        //  position: relative;
-        //    z-index: 1;
-
+     
         & h1 {
             color: #fff;
             font-size: 50px;
@@ -15,7 +13,7 @@
         }
     }
 
-    & .arrows {
+     .arrows {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -83,7 +81,7 @@
 
     }
 
-    .newCard__text {
+    &__text {
         background: #fff;
         padding: 50px 10px 15px 15px;
         position: relative;

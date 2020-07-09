@@ -1,8 +1,7 @@
+//not used File
+
 import React, { Component } from "react";
 
-import Card from "./Card";
-import data from "./data/data";
-import logo from "./assets/logo.svg";
 import ProcessCard from "./components/process/ProcessCard";
 import websiteData from "./data/website-data";
 

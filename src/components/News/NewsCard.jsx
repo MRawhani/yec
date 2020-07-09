@@ -8,7 +8,7 @@ export default function NewsCard({item}) {
         alt="Background of hero yce"
         className={`newsCard__image`}
       />
-      <div className="newCard__text">
+      <div className="newsCard__text">
         <p>
           {item?item.text :"Lorem ipsum dolor sit amet constetur, nulla rem. Voluptatum, exercitationem"}
          
