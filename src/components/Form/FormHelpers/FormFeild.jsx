@@ -22,33 +22,36 @@ export default function FormFeild({ id, formData, change, isError }) {
         formTemplate = (
           <div className="form__block">
             <div className="form__group">
-              {formData.showLabel ? (
+              {/* {formData.dontShowLable ? (
                 <div className="label_inputs">{formData.config.label}</div>
-                ) : null}
+              ) : null} */}
               <input
                 {...formData.config}
                 value={formData.value}
-                onBlur={event => change({ event, id, blur: true })}
-                onChange={event => change({ event, id, blur: true })}
+                onBlur={(event) => change({ event, id, blur: true })}
+                onChange={(event) => change({ event, id, blur: true })}
                 // onChange={event => change({ event, id })}
                 className={`form__input ${
                   formData.touched
                     ? showMessage().isValid
-                    ? " form__input__success"
-                    : " form__input__error"
+                      ? " form__input__success"
+                      : " form__input__error"
                     : "form__input__normal"
-                  }`}
+                }`}
                 id={id}
               />
-            <div className="flex-row">
-            {!formData.showLabel && (
-              <label htmlFor={id} className="form__label">
-                  {formData.config.placeholder}
-                </label>
-              )}
-              <span className="form__error"> {showMessage().errorMessage}</span>
-            </div>
-            </div>
+             { !formData.dontShowLable && <div className="flex-row">
+                {!formData.dontShowLable && (
+                  <label htmlFor={id} className="form__label">
+                    {formData.config.placeholder}
+                  </label>
+                )}
+                <span className="form__error">
+                  {" "}
+                  {showMessage().errorMessage}
+                </span>
+              </div>
+          }  </div>
 
             {/* <TextField
              error={error}
@@ -63,20 +66,17 @@ export default function FormFeild({ id, formData, change, isError }) {
         );
         break;
 
-      case "textarea":
+      case "date":
         formTemplate = (
           <div className="formBlock">
             {showMessage().errorMessage}
             <div className="form__group">
-              {formData.showLabel ? (
+              {formData.dontShowLable ? (
                 <div className="label_inputs">{formData.config.label}</div>
               ) : null}
-              <textarea
+              <input
+                type="date"
                 {...formData.config}
-                value={formData.value}
-                onBlur={event => change({ event, id, blur: true })}
-                onChange={event => change({ event, id, blur: true })}
-                // onChange={event => change({ event, id })}
                 className={`form__input ${
                   formData.touched
                     ? showMessage().isValid
@@ -85,8 +85,14 @@ export default function FormFeild({ id, formData, change, isError }) {
                     : "form__input__normal"
                 }`}
                 id={id}
+                value={formData.value}
+                onBlur={(event) => change({ event, id, blur: true })}
+                onChange={(event) => change({ event, id, blur: true })}
+                min="1930-01-01"
+                max="2020-12-31"
               />
-              {!formData.showLabel && (
+
+              {!formData.dontShowLable && (
                 <label htmlFor={id} className="form__label">
                   {formData.config.placeholder}
                 </label>
@@ -98,16 +104,15 @@ export default function FormFeild({ id, formData, change, isError }) {
       case "select":
         formTemplate = (
           <div className="formBlock">
-           
             <div className="form__group">
-              {formData.showLabel ? (
+              {formData.dontShowLable ? (
                 <div className="label_inputs">{formData.config.label}</div>
               ) : null}
               <select
-              style={{height:'40px'}}
+                style={{ height: "40px" }}
                 value={formData.value}
-                onBlur={event => change({ event, id, blur: true })}
-                onChange={event => change({ event, id, blur: true })}
+                onBlur={(event) => change({ event, id, blur: true })}
+                onChange={(event) => change({ event, id, blur: true })}
                 className={`form__input ${
                   formData.touched
                     ? showMessage().isValid
@@ -125,13 +130,16 @@ export default function FormFeild({ id, formData, change, isError }) {
                 ))}
               </select>
               <div className="flex-row">
-            {!formData.showLabel && (
-              <label htmlFor={id} className="form__label">
-                  {formData.config.placeholder}
-                </label>
-              )}
-              <span className="form__error"> {showMessage().errorMessage}</span>
-            </div>
+                {!formData.dontShowLable && (
+                  <label htmlFor={id} className="form__label">
+                    {formData.config.placeholder}
+                  </label>
+                )}
+                <span className="form__error">
+                  {" "}
+                  {showMessage().errorMessage}
+                </span>
+              </div>
             </div>
           </div>
         );
@@ -141,5 +149,5 @@ export default function FormFeild({ id, formData, change, isError }) {
     }
     return formTemplate;
   };
-  return <div >{renderTemplate()}</div>;
+  return <div>{renderTemplate()}</div>;
 }

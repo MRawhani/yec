@@ -19,7 +19,7 @@ export default class RegisterForm extends Form {
           config: {
             name: "firstName",
             type: "text",
-            placeholder: "firstName*",
+            placeholder: "First Name",
           },
           validation: {
             required: true,
@@ -34,7 +34,7 @@ export default class RegisterForm extends Form {
           config: {
             name: "lastName",
             type: "text",
-            placeholder: "lastName*",
+            placeholder: "Last Name",
           },
 
           validation: {
@@ -50,7 +50,7 @@ export default class RegisterForm extends Form {
           config: {
             name: "email",
             type: "text",
-            placeholder: "Email*",
+            placeholder: "Email",
           },
 
           validation: {
@@ -70,7 +70,7 @@ export default class RegisterForm extends Form {
               { key: "male", value: "male" },
               { key: "female", value: "female" },
             ],
-            placeholder: "Gender*",
+            placeholder: "Gender",
           },
           validation: {
             required: true,
@@ -80,12 +80,12 @@ export default class RegisterForm extends Form {
           validationMessage: "",
         },
         dateOfBirth: {
-          element: "input",
+          element: "date",
           value: "",
           config: {
             name: "dateOfBirth",
-            type: "text",
-            placeholder: "DateOfBirth*",
+            type: "date",
+            placeholder: "Date Of Birth",
           },
           validation: {
             required: true,
@@ -100,7 +100,7 @@ export default class RegisterForm extends Form {
           config: {
             name: "governate",
             type: "text",
-            placeholder: "Governate*",
+            placeholder: "Governate",
           },
           validation: {
             required: true,
@@ -115,7 +115,7 @@ export default class RegisterForm extends Form {
           config: {
             name: "mobile",
             type: "text",
-            placeholder: "Mobile*",
+            placeholder: "Mobile",
           },
           validation: {
             required: true,
@@ -184,6 +184,38 @@ export default class RegisterForm extends Form {
           touched: false,
           validationMessage: "",
         },
+        random: {
+          element: "input",
+          value: "secret",
+          config: {
+            name: "random",
+            type: "hidden",
+            placeholder: "random",
+          },
+          validation: {
+            required: true,
+          },
+          valid: true,
+          touched: false,
+          validationMessage: "",
+          dontShowLable: true,
+        },
+        empty: {
+          element: "input",
+          value: "",
+          config: {
+            name: "empty",
+            type: "hidden",
+            placeholder: "empty",
+          },
+          validation: {
+            //   required: true,
+          },
+          valid: true,
+          touched: false,
+          validationMessage: "",
+          dontShowLable: true,
+        },
       },
     };
   }
@@ -243,15 +275,18 @@ export default class RegisterForm extends Form {
   renderFormFeilds = () => {
     const feilds = Object.keys(this.state.formData);
 
-    return feilds.map((feild, i) => (
-      <FormFeild
-        id={feild}
-        key={i}
-        formData={this.state.formData[feild]}
-        change={(element) => this.updateForm(element)}
-        isError={this.state.formError}
-      />
-    ));
+    return feilds.map(
+      (feild, i) =>
+        (
+          <FormFeild
+            id={feild}
+            key={i}
+            formData={this.state.formData[feild]}
+            change={(element) => this.updateForm(element)}
+            isError={this.state.formError}
+          />
+        )
+    );
   };
   render() {
     const {
@@ -273,7 +308,7 @@ export default class RegisterForm extends Form {
             {formErrorMessage}
           </div>
         )}
-          {formSuccess && (
+        {formSuccess && (
           <div
             style={{
               backgroundColor: "yellowgreen",
@@ -281,7 +316,7 @@ export default class RegisterForm extends Form {
               color: "#fff",
             }}
           >
-           Success
+            Success
           </div>
         )}
         {this.renderFormFeilds()}

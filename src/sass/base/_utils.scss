@@ -1,9 +1,5 @@
 
-.animate{
-    animation: dis .4s;
-    position: relative;
-    transition: all .3s;
-}
+
 .no-margin-left{
     margin-left: 0;
 }
@@ -80,20 +76,12 @@
     padding: 0;
 }
 
-.customModal{
 
-    @include respond(m){
-        display: none;
-    }
-}
 
 .no-shadow{
     box-shadow: none;
 }
-.upOverlay{
-    position: relative;
-    z-index: 6;
-}
+
    
 
 /////////override
@@ -101,20 +89,6 @@
     outline: none;
 }
 
-.rc-collapse > .rc-collapse-item > .rc-collapse-header{
-    flex-direction:row-reverse !important;
-    justify-content: space-between;
-    background: #ffffff;
-    font-size: $default-font;
-
-}
-.image-gallery-content.left .image-gallery-slide .image-gallery-image, .image-gallery-content.right .image-gallery-slide .image-gallery-image {
-    max-height: 50vh !important;
-}
-.image-gallery-content.fullscreen{
-    top:50% !important;
-    transform: translateY(-50%) !important;
-}
 @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -153,22 +127,22 @@
 
  
 @-moz-keyframes spinPulse {
-    0% { transform: scale(.8); opacity:0; }
-	50% { transform:  scale(1); opacity:1; }
-	100% { transform:  scale(1.08); opacity:0; }
+    0% { transform: scale(1); opacity:1; }
+	
+	100% { transform:  scale(1.5); opacity:0; }
 }
  
  
 @keyframes spinPulse {
-       0% { transform: scale(.8); opacity:0; }
-	50% { transform:  scale(1); opacity:1; }
-	100% { transform:  scale(1.08); opacity:0; }
+       0% { transform: scale(1); opacity:1; }
+	
+	100% { transform:  scale(1.5); opacity:0; }
 }
 
 @-webkit-keyframes spinPulse {
-       0% { transform: scale(.8); opacity:0; }
-	50% { transform:  scale(1); opacity:1; }
-	100% { transform:  scale(1.08); opacity:0; }
+       0% { transform: scale(1); opacity:1; }
+	
+	100% { transform:  scale(1.5); opacity:0; }
 }
 
 
@@ -248,9 +222,9 @@
     bottom:0;
     left:0;
     z-index:0;
-     animation: spinPulse 1s infinite ease-in-out;
-    -moz-animation: spinPulse 1s infinite ease-in-out;
-    -webkit-animation: spinPulse 1s infinite ease-in-out;
+     animation: spinPulse 3s infinite ease-in-out;
+    -moz-animation: spinPulse 3s infinite ease-in-out;
+    -webkit-animation: spinPulse 3s infinite ease-in-out;
         opacity: .9;
     border-radius: 50%;
   background-color: transparent;
@@ -284,57 +258,7 @@ text-align: center;
     }
 }
 
-.slick-current{ 
-    
-    .processCard {
-        background-color: $main-color;
-        position: relative;
-       opacity: 1;
-        &::before {
-            content: "";
-            width: 30px;
-            height: 170px;
-            background-color: $second-color;
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 10%;
-        }
-    
-        &__title {
-           
-        transform: translateY(0%);
-color:#fff;
-    
-        }
-    
-        &__details {
-                       //  color: #fff;
-            opacity: 1;
-            color: white;
-     
-        } 
-    
-        &__number {
-           color: #f2f2f2;
-        
-        transform: translate(-22%,0%);
 
-          
-            
-     
-        }
-        
-        &__data {
-       
-    
-        }
-        
-      
-    
-    } 
-
-}
 
 .d-flex{
     display: flex;
@@ -345,6 +269,3 @@ color:#fff;
      align-items: center;
  }
 
- .slick-list{
-    //  padding: 0 100px !important;
- }

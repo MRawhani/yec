@@ -3,92 +3,98 @@
     position: relative;
 
     &__wrapper {
-     //edit   padding: 60px 90px;
-      //  position: relative;
-    //    z-index: 1;
-  
-        & h1{
-            color: #fff ;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        //  position: relative;
+        //    z-index: 1;
+
+        & h1 {
+            color: #fff;
             font-size: 50px;
             margin-bottom: 50px;
         }
     }
-    & .arrows{
+
+    & .arrows {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-       left: 0;
-       right: 0;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    transition: .2s;
-        &__next{
+        left: 0;
+        right: 0;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        transition: .2s;
+
+        &__next {
             width: 70px;
             height: auto;
             cursor: pointer;
             transition: .3s;
             position: absolute;
             right: 5%;
-          &:hover{
-              transform: translateY(-10px);
-          }
-           
-    
-     }
-     &__prev{
-         width: 70px;
-         height: auto;
-         cursor: pointer;
-         transition: .3s;
-         transform: rotate(180deg);
-         position: absolute;
-         left: 5%;
-       
-         &:hover{
-             transform: translateY(10px) rotate(180deg);
-         }
-    
-     }
+
+            &:hover {
+                transform: translateY(-10px);
+            }
+
+
+        }
+
+        &__prev {
+            width: 70px;
+            height: auto;
+            cursor: pointer;
+            transition: .3s;
+            transform: rotate(180deg);
+            position: absolute;
+            left: 5%;
+
+            &:hover {
+                transform: translateY(10px) rotate(180deg);
+            }
+
+        }
     }
-   
+
 }
 
-.newsCard{
-max-width: 250px;
-position: relative;
-    &__image{
+.newsCard {
+    max-width: 250px;
+    position: relative;
+
+    &__image {
         width: 150px;
         height: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .3s;
-    // background-image: none;
-position: relative;
-//opacity: .7;
+        // border-radius: 10px;
+        cursor: pointer;
+        transition: .3s;
+        // background-image: none;
+        position: relative;
+        //opacity: .7;
 
-    &:hover{
-        transform: translateY(-10px);
-       // opacity: 1;
-     //   background-color: $main-color;
- 
+        &:hover {
+            transform: translateX(10px);
+            // opacity: 1;
+            //   background-color: $main-color;
+
+
+        }
 
     }
 
-    }
- 
-    .newCard__text{
+    .newCard__text {
         background: #fff;
         padding: 50px 10px 15px 15px;
         position: relative;
-    top: -40px;
-    left: 22px;
-    z-index: -1;
-    border-radius: 10px;
+        top: -40px;
+        left: 22px;
+        z-index: -1;
+        border-radius: 10px;
 
-    & p{
-        font-size: 12px;
-        line-height: 1.4;
+        & p {
+            font-size: 12px;
+            line-height: 1.4;
+        }
     }
-    }
-} 
+}
